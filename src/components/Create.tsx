@@ -19,6 +19,7 @@ export default function Create(props: {refetch: Function}) {
             created: new Date().toDateString(),
             owner: sessionData?.user?.email as string
         })
+        setLabel('')
     }
 
     return (
