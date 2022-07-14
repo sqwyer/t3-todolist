@@ -1,0 +1,47 @@
+.Todo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5pt;
+    padding: 15pt 10pt;
+    border-bottom: 1px solid #eee;
+}
+
+.Todo.done label {
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5pt;
+}
+
+.Todo label {
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.Todo span {
+    color: #aaa;
+    font-size: 8pt;
+}
+
+.Todo:hover {
+    background: rgba(0,0,0,0.03);
+    transition: 0.1s background;
+}
+
+.Todo .Row {
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Todo .trash {
+    color: tomato;
+    /* padding: 3px; */
+    border-radius: 50%;
+    border: 1.5px solid tomato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    font-weight: 1.5px;
+    cursor: pointer;
+}

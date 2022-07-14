@@ -23,8 +23,6 @@ export default function Nav() {
     return (
       <div className={styles.Navbar}>
         <a className="underline">t3-todolist</a>
-        {/* {sessionData && <p>Logged in as {sessionData?.user?.name}</p>}
-        {secretMessage && <p>{secretMessage}</p>} */}
         
         {sessionData?.user ?
           <Dropdown preview={img} options={options}></Dropdown> :
