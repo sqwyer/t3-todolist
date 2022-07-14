@@ -1,42 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { trpc } from "../utils/trpc";
-import Dropdown from '../components/Dropdown';
-import { signIn, signOut, useSession } from "next-auth/react";
-import {FaGithub} from "react-icons/fa"
-
-const Nav: React.FC = () => {
-  const { data: secretMessage, isLoading } = trpc.useQuery([
-    "auth.getSecretMessage",
-  ]);
-
-  const { data: sessionData } = useSession();
-  console.log(sessionData?.user)
-
-  const options = [
-    {
-      content: 'Signout',
-      onClick: () => signOut()
-    }
-  ];
-
-  const img = <img className="auth-image" src={sessionData?.user?.image as string|undefined}></img>
-
-  return (
-    <div className="Navbar">
-      <a>t3-todolist</a>
-      {/* {sessionData && <p>Logged in as {sessionData?.user?.name}</p>}
-      {secretMessage && <p>{secretMessage}</p>} */}
-      
-      {sessionData ?
-        <Dropdown preview={img} options={options}></Dropdown> :
-        <button className="auth-button" onClick={sessionData ? () => signOut() : () => signIn("github")}>
-          <div><FaGithub /><p>Sign in with Github</p></div>
-        </button>
-      }
-    </div>
-  );
-};
+import Nav from "../components/Navbar";
+import Showcase from "../components/Showcase";
 
 const Home: NextPage = () => {
   return (
@@ -47,11 +12,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        {/* <h1>
-          Create <span>T3</span> App
-        </h1> */}
-
         <Nav />
+        <Showcase />
       </div>
     </>
   );

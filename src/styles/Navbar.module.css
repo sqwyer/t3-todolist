@@ -1,0 +1,40 @@
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10pt 30pt;
+    border-bottom: 1px solid #eee;
+}
+  
+.Navbar a {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 120%;
+}
+  
+.Navbar .authButton {
+    border: none;
+    color: #fff;
+    background: #000000;
+    padding: 10pt 20pt;
+    border-radius: 5pt;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.Navbar .authButton div {
+    flex-direction: row;
+    gap: 5pt;
+    display: flex;
+    align-items: center;
+}
+  
+.Navbar .authImage {
+    height: 35pt;
+    width: 35pt;
+    border-radius: 50%;
+    cursor: pointer;
+}
