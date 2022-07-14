@@ -16,8 +16,8 @@ export default function Dropdown(props: any) {
                 {props?.preview}
             </div>
             {open ? <div className={styles.options}>
-                {props.options.map((option: any) => {
-                    return <div className={styles.option} onClick={option?.onClick}>{option.content}</div>
+                {props.options.map((option: any, index: number) => {
+                    return <div key={index} className={styles.option} onClick={option?.onClick}>{option.content}</div>
                 })}
             </div> : <></>}
         </div>

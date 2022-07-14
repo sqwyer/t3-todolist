@@ -23,7 +23,7 @@ export default function Create(props: {refetch: Function}) {
 
     return (
         <div className={styles.Create}>
-            <h3>Create some to-do's.</h3>
+            <h3>Create some to-do&apos;s.</h3>
             <div className="row">
                 <input onChange={handleChange} value={label} type="text" />
                 <button onClick={() => create()}>Create</button>
