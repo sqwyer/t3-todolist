@@ -35,3 +35,7 @@
 .Create button:hover {
     border-bottom: 2px solid #be9cfd;
 }
+
+.centered {
+    text-align: center;
+}

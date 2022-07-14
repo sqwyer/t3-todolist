@@ -21,7 +21,7 @@ export default function Showcase() {
                     <Todo key={todo.id} refetch={refetch} id={todo.id} created={todo.created} done={todo.done} label={todo.label}></Todo>
                 ))} */}
             </div>
-          : <h2>You need to sign in to use <span className="underline">t3-todolist.</span></h2>
+          : <h2 className={styles.centered}>You need to sign in to use <span className="underline">t3-todolist.</span></h2>
         }
       </div>
     )
